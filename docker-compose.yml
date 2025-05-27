@@ -1,0 +1,14 @@
+services:
+  replitive-db:
+    image: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=replitive
+      - PGDATA=/data/postgres-replitive
+    volumes:
+      - postgres-replitive:/data/postgres-replitive
+
+volumes:
+  postgres-replitive:
