@@ -70,15 +70,21 @@ model Verification {
 }
 
 model VirtualBox {
-  id     String         @id
-  name   String
-  type   VirtualBoxType
-  userId String
+  id         String                   @id @default(uuid())
+  name       String
+  userId     String
+  type       VirtualBoxTypeEnum
+  visibility VirtualBoxVisibilityEnum
 
   user User @relation(fields: [userId], references: [id])
 }
 
-enum VirtualBoxType {
+enum VirtualBoxTypeEnum {
   REACT
   NODE
+}
+
+enum VirtualBoxVisibilityEnum {
+  PUBLIC
+  PRIVATE
 }
