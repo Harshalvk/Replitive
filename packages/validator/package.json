@@ -1,0 +1,16 @@
+{
+  "name": "@repo/validator",
+  "version": "0.0.0",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc -b"
+  },
+  "exports": {
+    "./validator": "./dist/index.js"
+  },
+  "dependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "zod": "^3.25.42"
+  },
+  "license": "ISC"
+}
