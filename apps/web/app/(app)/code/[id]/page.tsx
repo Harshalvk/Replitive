@@ -1,5 +1,6 @@
 "use client";
 
+import EditorNavbar from "@/components/Editor/EditorNavbar";
 import Navbar from "@/components/Navbar";
 import dynamic from "next/dynamic";
 
@@ -11,9 +12,9 @@ export default function Home() {
   return (
     <div className="flex w-screen flex-col h-screen bg-background">
       <div className="h-12 flex">
-        <Navbar />
+        <EditorNavbar />
       </div>
-      <div className="w-screen flex grow">
+      <div className="w-full flex grow">
         <CodeEditor />
       </div>
     </div>
