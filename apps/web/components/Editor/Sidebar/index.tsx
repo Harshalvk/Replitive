@@ -88,11 +88,11 @@ const Sidebar = () => {
         </div>
       </div>
       <div className="w-full mt-2 flex flex-col p-2">
-        {data.map((child) =>
+        {data.map((child, idx) =>
           child.type === "file" ? (
             <SidebarFile key={child.id} data={child} />
           ) : (
-            <SidebarFolder key={child.id} data={child} />
+            <SidebarFolder key={idx} data={child} />
           )
         )}
       </div>
