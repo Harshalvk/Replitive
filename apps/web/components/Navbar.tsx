@@ -1,12 +1,9 @@
-import { authClient } from "@/lib/auth-client";
-import { Clock, Pencil } from "lucide-react";
 import React from "react";
 import Logo from "./Logo";
 import Search from "./Search";
+import UserAccount from "./UserAccount";
 
 const Navbar = () => {
-  const { data: session } = authClient.useSession();
-
   return (
     <div className="w-full border-b flex items-center justify-between p-2">
       <div className="flex items-center">
@@ -19,7 +16,7 @@ const Navbar = () => {
       </div>
       <div className="flex items-center space-x-4">
         <Search />
-        {session && <h1>{session.user.name}</h1>}
+        <UserAccount />
       </div>
     </div>
   );
