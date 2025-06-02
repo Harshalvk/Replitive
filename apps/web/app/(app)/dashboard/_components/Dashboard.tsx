@@ -14,7 +14,7 @@ const Dashboard = () => {
 
   const activeScreen = (s: TScreen) => {
     if (screen === s) {
-      return "justify-start w-full border bg-gradient-to-t from-zinc-800 to-zinc-900 ";
+      return "justify-start w-full border bg-gradient-to-t from-pimary/50 to-primary/20 font-semibold";
     } else {
       return "w-full justify-start font-normal text-muted-foreground";
     }
@@ -23,7 +23,7 @@ const Dashboard = () => {
   return (
     <div className="flex flex-1 min-h-0">
       <div className="w-56 flex flex-col border-r border-border p-4 justify-between">
-        <div className="space-y-1 w-full">
+        <div className="space-y-1 w-full ">
           <CreateProjectDialog />
           <Button
             variant={"ghost"}
