@@ -22,7 +22,10 @@ const ProjectCard = ({ className }: { className?: string }) => {
         <Link href={`/code/${virtualbox.id}`}>
           <Card
             key={virtualbox.id}
-            className={cn("bg-gradient-to-tl from-zinc-900 flex", className)}
+            className={cn(
+              "bg-gradient-to-tl from-primary/20 flex border-t border-l",
+              className
+            )}
           >
             <CardContent className="h-full flex flex-col justify-between">
               <div className="font-semibold md:text-xl w-full flex justify-between items-center">
@@ -36,9 +39,8 @@ const ProjectCard = ({ className }: { className?: string }) => {
                     width={20}
                     height={20}
                     alt="Project icons"
-                    className="grayscale"
                   />
-                  <h1>{virtualbox.name}</h1>
+                  <h1 className="text-muted-foreground">{virtualbox.name}</h1>
                 </div>
                 <ProjectCardDropdown />
               </div>
