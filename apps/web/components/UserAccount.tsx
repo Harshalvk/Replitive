@@ -34,7 +34,7 @@ const UserAccount = () => {
             <UserAvatar user={user} />
           </DropdownMenuTrigger>
           <DropdownMenuContent
-            className="bg-white dark:bg-zinc-900"
+            className="bg-white dark:bg-primary-foreground"
             align="end"
           >
             <div className="flex items-center justify-star gap-2 p-2">
