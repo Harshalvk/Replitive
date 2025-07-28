@@ -1,0 +1,16 @@
+version: "3.4"
+
+services:
+  db:
+    image: postgres
+    container_name: replitive-db
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=replitive
+      - PGDATA=/data/replitive
+    volumes:
+      - replitive:/data/replitive
+
+volumes:
+  replitive:
